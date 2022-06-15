@@ -37,7 +37,7 @@ services:
       - nicvolume:/app
   vmec2:
 
-    image: manideep13/vmec2new
+    image: manideep13/vm
     container_name: vmec2container
     ports:
      - "1005:1005"
