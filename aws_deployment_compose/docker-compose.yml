@@ -1,0 +1,38 @@
+version: '2.2'
+
+                     
+services:
+  vpc:
+    image: manideep13/des-vpc
+    ports:
+     - "2000:2000"
+    container_name: aws_des_vpc_container
+
+  subnets:
+    image: manideep13/des-subnets
+    ports:
+     - "2001:2001"
+    container_name: aws_des_subnet_container 
+
+  sg:
+    image: manideep13/des-sgs
+    container_name: aws_des_sg_container
+    ports:
+     - "2002:2002"
+
+  instances:    
+    image: manideep13/des-instances
+    container_name: aws_des_instance_container
+    ports:
+     - "2003:2003"
+
+  resourcecreation:
+
+    image: manideep13/resource-creation-status
+    container_name: aws_resource_check_container
+    ports:
+     - "2004:2004"
+
+
+
+              

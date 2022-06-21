@@ -1,0 +1,38 @@
+version: '2.2'
+
+                     
+services:
+  vnet:
+    image: manideep13/az_vnet_check
+    ports:
+     - "3000:3000"
+    container_name: az_vnet_check_container
+
+  nsg:
+    image: manideep13/az_nsg_check
+    ports:
+     - "3001:3001"
+    container_name: az_nsg_check_container 
+
+  publicip:
+    image: manideep13/az_publicip_check
+    container_name: az_publicip_check_container
+    ports:
+     - "3002:3002"
+
+  nic:    
+    image: manideep13/az_nic_check
+    container_name: az_nic_check_container
+    ports:
+     - "3003:3003"
+
+  vm:
+
+    image: manideep13/az_vm_check
+    container_name: az_vm_check_container
+    ports:
+     - "3004:3004"
+
+
+
+              
