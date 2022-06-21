@@ -3,7 +3,7 @@ version: '2.2'
                      
 services:
   vpc:
-    image: manideep13/des-vpc
+    image: manideep13/des-vpcs
     ports:
      - "2000:2000"
     container_name: aws_des_vpc_container
@@ -28,7 +28,7 @@ services:
 
   resourcecreation:
 
-    image: manideep13/resource-creation-status
+    image: manideep13/resource-creation-status-aws
     container_name: aws_resource_check_container
     ports:
      - "2004:2004"
